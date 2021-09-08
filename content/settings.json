@@ -1,0 +1,11 @@
+{
+  "title": "vue-formily",
+  "url": "https://vue-formily.netlify.app",
+  "logo": {
+    "light": "/logo-light.svg",
+    "dark": "/logo-dark.svg"
+  },
+  "defaultBranch": "main",
+  "github": "vue-formily/formily",
+  "twitter": "@haquangngocan"
+}
