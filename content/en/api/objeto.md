@@ -24,7 +24,9 @@ This class inherit the constructor from parent class. To get an instance of this
 ## Properties
 | Prop | Type | Default | Description |
 | ---- | ---- | ---------------- | ----------- |
-| **_d** | `any` | `{}` | The internal data using in all subclasses. |
+| *protected* **_d** | `Record<string, any>` | `{}` | The internal data using in all subclasses. |
+| *protected* **_config** <prop-infos readonly></prop-infos> | `Record<string, any>` | `{}` | The internal configuration using in all subclasses. <alert>vue-formily stores all the elements constructor and plugins here</alert> |
+| **plugs** | [`Plugs`](/guide/plugins#writing-a-plugin) | `{}` | Any plugins for the current element |
 
 ## Inherited Methods
 ### From class [Evento](/api/evento)

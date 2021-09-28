@@ -40,10 +40,6 @@ Every Vue instance will have a **$formily** instance which contains the followin
 ### addForm
 Create new Form instance and injects it to `forms` object of the current Vue instance, and **vue-formily** will auto bind the current Vue instanceto the form.
 
-<alert type="warning">
-  <b>vue-formily</b> will add a <b>_formy</b> prop to the added form instance, this prop will contain some data like <b>vm (the Vue instance)</b>... so this object shouldn't be modified.
-</alert>
-
 **Signatures**
 ```typescript
 addForm(schema: FormSchema): Form;
@@ -56,11 +52,22 @@ addForm(schema: FormSchema): Form;
 - The [Form](/api/form) instance.
 
 ### removeForm
-Remove a **form element** from current Vue instance.
+Remove a **form element**.
 
 **Signatures**
 ```typescript
 removeForm(formId: string): void;
+```
+
+**Parameters**
+- **formId** - The form id.
+
+### getForm
+Get a **form element**.
+
+**Signatures**
+```typescript
+getForm(formId: string): Form;
 ```
 
 **Parameters**

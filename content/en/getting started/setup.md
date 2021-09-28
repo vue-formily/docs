@@ -41,11 +41,26 @@ If you are using native ES Modules, there is also an ES Modules compatible build
 
 Then integrate it with **Vue**
 
+### Vue 3.x
+```typescript
+import { createApp } from 'vue'
+import { createFormily } from '@vue-formily/formily';
+
+const formily = createFormily();
+
+const app = createApp(App)
+
+app.use(formily, {} as VueFormilyOptions);
+```
+
+### Vue 2.x
 ```typescript
 import Vue from 'vue';
-import VueFormily from '@vue-formily/formily';
+import { createFormily } from '@vue-formily/formily';
 
-Vue.use(VueFormily, {} as VueFormilyOptions);
+const formily = createFormily();
+
+Vue.use(formily, {} as VueFormilyOptions);
 ```
 
 ## Options
@@ -68,8 +83,6 @@ interface VueFormilyOptions {
   // The alias of the object contain all the references to the created forms.
   // Default is `forms`
   alias?: string;
-  // All your custom form elements can be registed here
-  elements?: any[];
 }
 ```
 

@@ -30,7 +30,6 @@ export default {
           { text: 'unregister', url: '/api/element#static-unregister' },
           { text: 'isValid', url: '/api/element#abstract-isvalid' },
           { text: 'getHtmlName', url: '/api/element#abstract-getHtmlName' },
-          { text: 'getVm', url: '/api/element#getVm' },
           { text: 'shake', url: '/api/element#shake' },
           { text: 'cleanUp', url: '/api/element#cleanUp' },
           { text: 'addProps', url: '/api/element#addProps' },

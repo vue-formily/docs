@@ -52,12 +52,13 @@ interface ElementSchema {
 ## Properties
 | Prop | Type | Default | Description |
 | ---- | ---- | ---------------- | ----------- |
-| **parent** <prop-infos readonly></prop-infos> | `Element \| null` | `null` | The parent element. |
+| **parent** | `Element \| null` | `null` | The parent element. |
 | **model** <prop-infos readonly></prop-infos> | `string` | | model name, used as a property name in `enum` type element, e.g, `{ [field1.model]: value, [field2.model]: value }` |
 | **formId** <prop-infos readonly></prop-infos> | `string` | | The unique id of this element in the form |
 | **htmlName** <prop-infos readonly></prop-infos> | `string` | | The global unique name of the element, which can be used as name in the html form. For radio buttons this name is not unique. |
 | **valid** <prop-infos readonly></prop-infos> | `boolean` | `true` | Identifies if this element and all its children elements are valid. <alert> On first init, a form element is always `valid`. </alert> |
-| **props** | `Record<string, any> \| {}` | These properties can be used to dynamically format the user interface. |
+| **props** | `Record<string, any> \| {}` | | These properties can be used to dynamically format the user interface. |
+| **data** | `WeakMap`  | | Usage data for the current element, useful when you want to process some underlying logic. |
 | **shaked** | `boolean`  | `false` | Indicate the field is shaked or not. |
 | **error** <prop-infos readonly></prop-infos> | `string \| null`  | `null` | The error message when this element is `shaked` and `invalidated`. |
 | **validation** <prop-infos readonly></prop-infos> | `Validation` | `Validation` | The [Validation](/api/validation) object. |
@@ -99,17 +100,6 @@ getHtmlName(): string;
 
 **Returns**
 - `string` - the global unique name of this element.
-
-### getVm
-Returns the current Vue instance.
-
-**Signatures**
-```typescript
-getVm(): Vue;
-```
-
-**Returns**
-- The Vue intance
 
 ### shake
 Shake the element so that the `error message` can be shown.

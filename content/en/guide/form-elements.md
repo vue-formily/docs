@@ -145,11 +145,11 @@ Here are the example:
 
 Here is the demo on Codepen:
 
-<p class="codepen" data-height="400" data-theme-id="dark" data-default-tab="result" data-slug-hash="VwWPPZd" data-user="hqnan" style="height: 400px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-  <span>See the Pen <a href="https://codepen.io/hqnan/pen/VwWPPZd">
+<iframe height="400" style="width: 100%;" scrolling="no" title="vue-formily group's value" src="https://codepen.io/hqnan/embed/VwWPPZd?default-tab=result&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/hqnan/pen/VwWPPZd">
   vue-formily group's value</a> by anha (<a href="https://codepen.io/hqnan">@hqnan</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
 
 ## Collection
 A Collection is a list of **groups**, it's useful when you need to design a form that contains a list of items such as: addresses, cards, skills... Collection has the type is `set`, that mean its value is an **array** that has the value of all **sub-groups**. For example:
@@ -181,11 +181,11 @@ console.log(collection.value); // [{ name: 'FE', description: 'Frontend Develope
 
 Here is the demo on Codepen:
 
-<p class="codepen" data-height="300" data-theme-id="dark" data-default-tab="result" data-slug-hash="JjJEyjx" data-user="hqnan" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-  <span>See the Pen <a href="https://codepen.io/hqnan/pen/JjJEyjx">
-  vue-formily collection value</a> by anha (<a href="https://codepen.io/hqnan">@hqnan</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
+<iframe height="600" style="width: 100%;" scrolling="no" title="vue-formily collection's value" src="https://codepen.io/hqnan/embed/JjJEyjx?default-tab=result&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/hqnan/pen/JjJEyjx">
+  vue-formily collection's value</a> by anha (<a href="https://codepen.io/hqnan">@hqnan</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
 
 ### Schema
 To learn about the schema, please read the [document](/api/collection#constructor).

@@ -11,7 +11,7 @@ Let's start with a simple login form:
 `vue-formily` need a form schema to work with, so let's define one:
 
 ```js
-const loginForm = {
+const loginForm = defineSchema({
   formId: "login",
   fields: [
     {
@@ -50,7 +50,7 @@ const loginForm = {
       }
     }
   ]
-}
+})
 ```
 
 ## Create New Form
