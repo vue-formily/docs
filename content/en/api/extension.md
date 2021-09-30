@@ -20,7 +20,7 @@ Vue.use(VueFormily);
 // In Vue component
 export default {
   created() {
-    this.$formily.add({
+    this.$formily.addForm({
       formId: 'login',
       // ...
     });

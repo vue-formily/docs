@@ -54,7 +54,7 @@ const loginForm = defineSchema({
 ```
 
 ## Create New Form
-Then we call [`$formily.add`](/api/extension#addform) to create new form element and injects it to Vue instance's `forms` object.
+Then we call [`$formily.addform`](/api/extension#addform) to create new form element and injects it to Vue instance's `forms` object.
 
 ```vue
 <template>
@@ -70,7 +70,7 @@ Then we call [`$formily.add`](/api/extension#addform) to create new form element
 export default {
   created() {
     // Create new form element and injects it to `forms` object.
-    this.$formily.add(loginForm);
+    this.$formily.addForm(loginForm);
   }
 }
 </script>
