@@ -103,7 +103,7 @@ After installing **String Format Plugin**, we can use the `format` option in the
 // Sample schema
 {
   formId: 'name',
-  // Type has te be string
+  // Type has to be string
   type: 'string',
   // `value` is the Field's value
   format: 'Welcome, {value}!'

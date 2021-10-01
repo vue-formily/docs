@@ -5,6 +5,9 @@ position: 7
 category: Guide
 ---
 
+## Links
+- [Github](https://github.com/vue-formily/rules)
+
 ## Basic Usage
 ```typescript
 import { required, email } from '@vue-formily/rules';

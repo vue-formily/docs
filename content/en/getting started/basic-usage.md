@@ -11,6 +11,8 @@ Let's start with a simple login form:
 `vue-formily` need a form schema to work with, so let's define one:
 
 ```js
+import { required, email } from "@vue-formily/rules";
+
 const loginForm = defineSchema({
   formId: "login",
   fields: [
@@ -52,6 +54,7 @@ const loginForm = defineSchema({
   ]
 })
 ```
+We're using **required** and **email** rules to validate fields. To learn more about validation rules, please check the document [here](/guide/validation-rules).
 
 ## Create New Form
 Then we call [`$formily.addform`](/api/extension#addform) to create new form element and injects it to Vue instance's `forms` object.
