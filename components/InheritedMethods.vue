@@ -33,7 +33,8 @@ export default {
           { text: 'shake', url: '/api/element#shake' },
           { text: 'cleanUp', url: '/api/element#cleanUp' },
           { text: 'addProps', url: '/api/element#addProps' },
-          { text: 'getProps', url: '/api/element#getProps' }
+          { text: 'getProps', url: '/api/element#getProps' },
+          { text: 'getSchema', url: '/api/element#getschema' }
         ],
         group: [
           { text: 'accept', url: '/api/group#static-accept' },

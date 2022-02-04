@@ -40,6 +40,7 @@ interface CollectionSchema extends ElementSchema {
 | *static* **FORM_TYPE** | `string` | `collection` | the type of the `Collection` |
 | **formType** <prop-infos readonly></prop-infos> | `string` | `Collection.FORM_TYPE` | the form type of this field |
 | **type** <prop-infos readonly></prop-infos> | `set` | `set` | the type of this field |
+| **groups** | `CollectionItem[]` | `[]` | collection group items |
 | **pending** <prop-infos readonly></prop-infos> | `boolean` | `false` | Identifies if the element is processing asynchronous methods |
 | **value** | `any[] \| null` | `null` | The **array of typed group value** representation. E.g, `[{ name: 'Jonh', age: 23 }, { name: 'Smith', age: 22 }]`. The `value` is always `null` if the current collection element or any of its children element is invalid. |
 
@@ -171,6 +172,51 @@ shake(options?: { cascade?: boolean }): void;
   cascade?: boolean
 }
 ```
+
+### addField
+Add new field to all collection group items.
+
+**Signatures**
+```typescript
+addField(schema: ElementsSchemas, options: { at?: number }): Element[];
+```
+
+**Parameters**
+- **options**.
+```typescript
+{ 
+  // The index position that you want to add
+  at?: number 
+}
+```
+
+**Returns**
+- The array of added element fields
+
+### removeField
+Remove field from all collection group items.
+
+**Signatures**
+```typescript
+removeField(id: string): (Element | null)[];
+```
+
+**Parameters**
+- **id** - The removing element id.
+
+**Returns**
+- The removed element field or `null` if there is no field to be removed.
+
+### getSchema
+Return current schema including added element field by `addField` method or removed element field by `removeField` method.
+
+**Signatures**
+```typescript
+getSchema(): CollectionSchema;
+```
+
+**Returns**
+-`CollectionSchema`.
 
 ## Inherited Methods
 ### From class [Element](/api/element)

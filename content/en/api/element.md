@@ -62,6 +62,7 @@ interface ElementSchema {
 | **shaked** | `boolean`  | `false` | Indicate the field is shaked or not. |
 | **error** <prop-infos readonly></prop-infos> | `string \| null`  | `null` | The error message when this element is `shaked` and `invalidated`. |
 | **validation** <prop-infos readonly></prop-infos> | `Validation` | `Validation` | The [Validation](/api/validation) object. |
+| **schema** <prop-infos readonly></prop-infos> | `Record<string, any>` | `{}` | The current element schema. |
 
 ## Methods
 ### static register
@@ -147,6 +148,17 @@ getProps(path: string, options?: { up?: boolean }): any;
   up?: boolean
 }
 ```
+
+### getSchema
+Return current element schema.
+
+**Signatures**
+```typescript
+getSchema(): Record<string, any>;
+```
+
+**Returns**
+- Current element schema.
 
 ## Inherited Methods
 ### From class [Evento](/api/evento)

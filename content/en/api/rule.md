@@ -46,6 +46,7 @@ interface RuleSchema {
 | **validator** | `Validator \| null` | `null` | The validator for current rule. |
 | **valid** | `boolean` | `true` | Indicate current rule is valid or not. |
 | **error** | `string \| null` | `null` | The localized error message. |
+| **schema** | `RuleSchema \| Validator` |  | The current rule schema. |
 
 ## Methods
 ### setMessage
@@ -86,6 +87,17 @@ async validate(value: any, props: Record<string, any> = {}, ...args: any[]): Pro
 
 **Returns**
 - The `Promise` of `Rule` instance.
+
+### getSchema
+Return current schema.
+
+**Signatures**
+```typescript
+getSchema(): RuleSchema | Validator;
+```
+
+**Returns**
+- `RuleSchema | Validator`.
 
 ## Inherited Methods
 ### From class [Evento](/api/evento)

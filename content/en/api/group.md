@@ -142,6 +142,52 @@ shake(options?: { cascade?: boolean }): void;
 }
 ```
 
+### addField
+Add new field to current form group.
+
+**Signatures**
+```typescript
+addField(schema: FieldSchema | GroupSchema | CollectionSchema, options): Element;
+```
+
+**Parameters**
+- **schema** - The new element field schema.
+- **options**.
+```typescript
+{ 
+  // The index position that you want to add
+  at?: number 
+}
+```
+
+**Returns**
+- The added element field
+
+### removeField
+Remove field from current form group.
+
+**Signatures**
+```typescript
+removeField(elementOrId: Record<string, any> | string): Element | null;
+```
+
+**Parameters**
+- **elementOrId** - The removing element field or id.
+
+**Returns**
+- The removed element field or `null` if there is no field to be removed.
+
+### getSchema
+Return current schema including added element field by `addField` method or removed element field by `removeField` method.
+
+**Signatures**
+```typescript
+getSchema(): GroupSchema;
+```
+
+**Returns**
+- `GroupSchema`.
+
 ## Inherited Methods
 ### From class [Element](/api/element)
 <InheritedMethods name="element"></InheritedMethods>

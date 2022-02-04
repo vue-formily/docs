@@ -51,6 +51,7 @@ type ValitionRuleSchema = Validator | {
 | Prop | Type | Default | Description |
 | ---- | ---- | ---------------- | ----------- |
 | **rules** | `Rule[]` | `[]` | All the validation rules. |
+| **schema** | `(RuleSchema<string> \| Validator \| undefined)[] \| null` | `null` | The current rules schema. |
 | **valid** <prop-infos readonly></prop-infos> | `boolean` | `true` | `valid` is `true` if all rules are `valid` |
 | **errors** <prop-infos readonly></prop-infos> | `string[] \| null` | `null` | Array of errors from the invalid rules |
 
@@ -164,6 +165,17 @@ async validate(
 
 **Returns**
 - The `Promise` of `Validation` instance.
+
+### getSchema
+Return current schema including added rule(s) by `addRule` method or removed rule(s) by `removeRule` method.
+
+**Signatures**
+```typescript
+getSchema(): (Validator | RuleSchema<string> | undefined)[] | null;
+```
+
+**Returns**
+- Array of `Validator | RuleSchema<string> | undefined` or `null`.
 
 ## Inherited Methods
 ### From class [Evento](/api/evento)

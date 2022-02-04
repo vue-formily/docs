@@ -10,6 +10,9 @@ Add `@vue-formily/formily` dependency to your project:
   <code-block label="Yarn" active>
 
   ```bash
+  # vue 3.x
+  yarn add @vue-formily/formily@next
+  # vue 2.x
   yarn add @vue-formily/formily
   ```
 
@@ -17,6 +20,9 @@ Add `@vue-formily/formily` dependency to your project:
   <code-block label="NPM">
 
   ```bash
+  # vue 3.x
+  npm install @vue-formily/formily@next
+  # vue 2.x
   npm install @vue-formily/formily
   ```
 
@@ -26,6 +32,9 @@ Add `@vue-formily/formily` dependency to your project:
 Or with a script tag and a CDN, import the library like this:
 
 ```html
+<!-- vue 3.x -->
+<script src="https://unpkg.com/@vue-formily/formily@next"></script>
+<!-- vue 2.x -->
 <script src="https://unpkg.com/@vue-formily/formily@latest"></script>
 ```
 
@@ -35,6 +44,9 @@ If you are using native ES Modules, there is also an ES Modules compatible build
 
 ```html
 <script type="module">
+  // vue 3.x
+  import Vue from 'https://unpkg.com/@vue-formily/formily@next/dist/formily.esm.js'
+  // vue 2.x
   import Vue from 'https://unpkg.com/@vue-formily/formily@latest/dist/formily.esm.js'
 </script>
 ```

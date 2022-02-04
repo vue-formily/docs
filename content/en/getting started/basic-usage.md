@@ -11,6 +11,7 @@ Let's start with a simple login form:
 `vue-formily` need a form schema to work with, so let's define one:
 
 ```js
+import { defineSchema } from '@vue-formily';
 import { required, email } from "@vue-formily/rules";
 
 const loginForm = defineSchema({
@@ -63,17 +64,29 @@ Then we call [`$formily.addform`](/api/extension#addform) to create new form ele
 <template>
   <form class="login">
     <div v-for="(field, i) in forms.login.fields" :key="i" class="field">
-      <label :for="field._uid">{{ field.label }}</label>
-      <input v-model="field.raw" :type="field.props.inputType" :name="field.name" :id="field._uid" />
+      <label :for="field.formId">{{ field.label }}</label>
+      <input v-model="field.raw" :type="field.props.inputType" :name="field.name" :id="field.formId" />
     </div>
   </form>
 </template>
 
 <script>
+//  Vue 2.x
 export default {
   created() {
     // Create new form element and injects it to `forms` object.
     this.$formily.addForm(loginForm);
+  }
+}
+
+// Vue 3.x
+import { useFormily } from '@vue-formily';
+
+export default {
+  setup() {
+    const formily = useFormily();
+    // Create newå form element and injects it to `forms` object.
+    formily.add(loginForm);
   }
 }
 </script>
